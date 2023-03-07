@@ -21,7 +21,7 @@ namespace Eksamen.S2.Controller
 
         public Commander()
         {
-            AllPlayers = db.GetAllPlayers();
+            //AllPlayers = db.GetAllPlayers();
         }
 
         public List<Player> AllPlayers { get => allPlayers; set => allPlayers = value; }
@@ -29,10 +29,10 @@ namespace Eksamen.S2.Controller
         public void UpdateCurrentPlayer(string username, string phoneNumber, string email)
         {
             currentPlayer = new Player(username, phoneNumber, email);
-            if (!AllPlayers.Contains(currentPlayer))
-            {
-                db.AddNew(currentPlayer);
-            }
+            //if (!AllPlayers.Contains(currentPlayer))
+            //{
+            //    db.AddNew(currentPlayer);
+            //}
         }
 
         public void AddPoints(int amount)
