@@ -17,10 +17,22 @@ namespace Eksamen.S2.Controller
 
         List<long> scores = new List<long>();
         Player currentPlayer;
+        List<Player> allPlayers = new List<Player>();
+
+        public Commander()
+        {
+            AllPlayers = db.GetAllPlayers();
+        }
+
+        public List<Player> AllPlayers { get => allPlayers; set => allPlayers = value; }
 
         public void UpdateCurrentPlayer(string username, string phoneNumber, string email)
         {
             currentPlayer = new Player(username, phoneNumber, email);
+            if (!AllPlayers.Contains(currentPlayer))
+            {
+                db.AddNew(currentPlayer);
+            }
         }
 
         public void AddPoints(int amount)

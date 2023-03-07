@@ -93,5 +93,13 @@ namespace Eksamen.S2.Model
             }
         }
 
+        public void Update(Player player)
+        {
+            string updateQuery = $"UPDATE Players " +
+                $"SET HighScore='{player.HighScore}', TimesPlayed={player.TimesPlayed}, PhoneNumber={player.PhoneNumber}, Email={player.Email} " +
+                $"WHERE Username='{player.Username}';";
+            Execute(updateQuery);
+        }
+
     }
 }
