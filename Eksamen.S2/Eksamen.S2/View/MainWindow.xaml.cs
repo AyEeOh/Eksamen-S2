@@ -51,7 +51,7 @@ namespace Eksamen.S2.View
         /// </summary>
         private void OnStartUp()
         {
-            Grid.SetZIndex(canvas, -10);
+            Panel.SetZIndex(canvas, -10);
             grid.Children.Add(canvas);
 
             playerSquare = new Rectangle
