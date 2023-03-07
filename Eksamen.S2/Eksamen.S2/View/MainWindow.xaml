@@ -1,0 +1,27 @@
+﻿<Window x:Name="wndMain" x:Class="Eksamen.S2.View.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Eksamen.S2.View"
+        mc:Ignorable="d"
+        Title="Jump Square" Height="600" Width="800" Initialized="MainWindow_Initialized" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" FontSize="16" Closing="Program_Closing">
+    <Grid x:Name="grid">
+        <Grid x:Name="grdInputUserValues" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200" Height="200" Margin="0,0,0,250">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Who are you?" VerticalAlignment="Top"/>
+            <TextBox x:Name="tbxUsername" HorizontalAlignment="Center" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Center" Padding="0,1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" AutomationProperties.HelpText="Write your username" Width="180" TextAlignment="Center" IsUndoEnabled="False" MaxLength="16" Text="Username" IsInactiveSelectionHighlightEnabled="True" Height="25"/>
+            <TextBox x:Name="tbxPhoneNumber" HorizontalAlignment="Center" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Center" Padding="0,1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" AutomationProperties.HelpText="Write your username" Width="180" TextAlignment="Center" IsUndoEnabled="False" MaxLength="16" Text="Phone Number" IsInactiveSelectionHighlightEnabled="True" Height="25"/>
+            <TextBox x:Name="tbxEmail" HorizontalAlignment="Center" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Center" Padding="0,1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" AutomationProperties.HelpText="Write your username" Width="180" TextAlignment="Center" IsUndoEnabled="False" Text="Email" IsInactiveSelectionHighlightEnabled="True" Height="25" MaxLength="50"/>
+            <Button x:Name="btnContinueToGame" Content="Continue" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center" Width="75" Click="ContinueToGame_Click"/>
+
+        </Grid>
+        <Label x:Name="lblScore" Content="Score: 0" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,20,0,0" FontSize="20" Visibility="Collapsed"/>
+    </Grid>
+</Window>
